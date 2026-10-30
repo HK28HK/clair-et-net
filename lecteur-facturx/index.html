@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lire une facture Factur-X sans l'envoyer en ligne — Lecteur Factur-X local</title>
+<meta name="description" content="Ouvrir une facture Factur-X ou ZUGFeRD, lire ses données XML et repérer les mentions manquantes, dans votre navigateur, sans envoyer le fichier. Extension Chrome gratuite.">
+<link rel="canonical" href="https://hk28hk.github.io/clair-et-net/lecteur-facturx/">
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:40rem;margin:3rem auto;padding:0 1rem;color:#1d2a2a}a{color:#0f7a63}.cta{display:inline-block;background:#0f7a63;color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}img{max-width:100%;border:1px solid #d5dede;border-radius:6px}</style>
+<h1>Lire une facture Factur-X sans l'envoyer en ligne</h1>
+<p>Une facture Factur-X ressemble à un PDF ordinaire, mais elle contient aussi un fichier XML avec ses données : vendeur, acheteur, lignes, TVA, totaux. Un lecteur PDF montre la page ; il ne montre pas ce XML, ni ce qui y manque.</p>
+<p>Le <strong>Lecteur Factur-X local</strong> est une extension Chrome gratuite qui ouvre ce XML et l'affiche en clair, directement dans votre navigateur.</p>
+<p><a class="cta" href="https://chromewebstore.google.com/detail/ckdaklkppmfmkcbdlfjloflmgjppakdg">Ajouter à Chrome (gratuit)</a></p>
+<p><img src="capture-exemple.png" alt="Le lecteur affiche le vendeur, l'acheteur, les lignes et les totaux d'une facture Factur-X d'exemple" width="1280" height="800"></p>
+
+<h2>Ce qu'il fait</h2>
+<ul>
+  <li>Vous glissez un PDF Factur-X ou ZUGFeRD (ou un XML seul) : il affiche vendeur, acheteur, lignes, TVA, totaux et échéance.</li>
+  <li>Il vérifie la présence des données du socle européen (EN 16931) et des mentions de la réforme française : SIREN de l'acheteur, date de livraison ou d'exécution, adresse de livraison, motif d'exonération de TVA.</li>
+  <li>Il recalcule les totaux pour repérer un écart entre les lignes et le montant annoncé.</li>
+</ul>
+
+<h2>Pourquoi local</h2>
+<p>Les validateurs en ligne demandent de téléverser la facture, avec ses montants et souvent un IBAN. Ici, rien ne quitte votre ordinateur : pas de serveur, pas de compte, aucune permission Chrome demandée. Détails dans la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+
+<h2>En trois gestes</h2>
+<ol>
+  <li>Installez l'extension depuis le Chrome Web Store.</li>
+  <li>Cliquez sur son icône : le lecteur s'ouvre dans un onglet.</li>
+  <li>Déposez la facture. Le bouton « Essayer avec une facture exemple » montre le résultat sans fichier.</li>
+</ol>
+
+<h2>Questions fréquentes</h2>
+<h3>Comment savoir si mon PDF est une Factur-X ?</h3>
+<p>Déposez-le dans le lecteur : s'il ne trouve pas de XML embarqué, il le dit. Renommer un PDF ordinaire ne le transforme pas en Factur-X.</p>
+<h3>Est-ce une validation officielle ?</h3>
+<p>Non. C'est un contrôle indicatif de la présence des données, ni une validation de conformité ni un avis juridique. Votre plateforme agréée reste la référence.</p>
+<h3>Quels formats ?</h3>
+<p>Factur-X et ZUGFeRD 2.x (syntaxe CII). ZUGFeRD 1.0 et UBL reçoivent un message clair mais ne sont pas affichés.</p>
+<h3>Firefox, Edge ?</h3>
+<p>L'extension est publiée pour Chrome. Edge et les autres navigateurs basés sur Chromium installent en général les extensions du Chrome Web Store.</p>
+
+<p>Clair et Net est l'activité de Killian Hoarau, entrepreneur individuel. Extension réalisée avec l'aide d'une IA et testée sur 151 factures publiques.</p>
+</html>
